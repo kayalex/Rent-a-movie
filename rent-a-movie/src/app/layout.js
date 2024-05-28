@@ -14,13 +14,13 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body>
         <div className='flex justify-around h-8 bg-slate-900 top-0 text-white'>
-          <Link className='block' href={"/browse"}>
+          <Link className='block' href={"/"}>
             Home
           </Link>
           <Link className='block' href={"/browse"}>
             Movies
           </Link>
-          <Link className='block' href={"/browse"}>
+          <Link className='block' href={"/my-rentals"}>
             Rent
           </Link>
         </div>

@@ -31,11 +31,11 @@ export default function MovieDetails({ params }) {
 
   return (
     <div>
-      <h1>{movie.title}</h1>
-      <p>{movie.genre}</p>
-      <p>{movie.description}</p>
-      <h3>Actors</h3>
-      <ul>
+      <h1 className='text-xl font-semibold mb-2'>{movie.title}</h1>
+      <p class='text-gray-600 '>{movie.genre}</p>
+      <p class='text-gray-600 '>{movie.description}</p>
+      <h3 className='text-l font-semibold mb-2'>Actors</h3>
+      <ul className='flex justify-around w-3/12'>
         {movie.actors.map((actor, index) => (
           <li key={index}>{actor}</li>
         ))}
