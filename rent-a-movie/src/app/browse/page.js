@@ -17,10 +17,10 @@ export default function Browse() {
 
   return (
     <div>
-      <h1>Browse Movies</h1>
-      <div>
+      <h1 className='text-2xl'>Browse Movies</h1>
+      <div className='bg-red-100'>
         {movies.map((movie) => (
-          <div key={movie.id}>
+          <div className='border-2 border-teal-300' key={movie.id}>
             <h3>{movie.title}</h3>
             <p>{movie.genre}</p>
             <Link href={`/movies/${movie.id}`}>View Details</Link>

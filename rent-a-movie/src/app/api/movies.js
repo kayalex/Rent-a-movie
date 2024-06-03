@@ -9,7 +9,7 @@ const movies = [
   },
   {
     id: 2,
-    title: "sing",
+    title: "Sing",
     genre: "comedy",
     actors: ["john", "rock", "downey"],
     description:

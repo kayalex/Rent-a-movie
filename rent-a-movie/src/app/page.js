@@ -1,38 +1,59 @@
-// pages/index.js
-import Link from "next/link";
-import movies from "./api/movies";
+// pages/login.js
 
-export default function Home() {
-  // This would be fetched from an API
+import React from "react";
 
+export default function Login() {
   return (
-    <div>
-      <h1 className='text-center uppercase font-extrabold text-3xl'>
-        Welcome to Movie Rental Store
-      </h1>
-      <h2 className='text-xl font-semibold m-3 text-center'>Featured Movies</h2>
-      <div className='items-center flex flex-wrap'>
-        {movies.map((movie) => (
-          <div
-            className='bg-white shadow-md rounded-lg overflow-hidden max-w-sm mx-auto my-4 m-1 p-5'
-            key={movie.id}
-          >
-            <h2 className='text-xl font-semibold mb-2'>{movie.title}</h2>
-            <p class='text-gray-600 mb-4'>{movie.description}</p>
-            <Link
-              className='text-red-600 hover:text-red-700 font-semibold transition-all '
-              href={`/movies/${movie.id}`}
+    <div className='min-h-screen flex items-center justify-center bg-gray-100'>
+      <div className='bg-white p-8 rounded shadow-md w-full max-w-md'>
+        <h2 className='text-2xl font-bold mb-6 text-center'>Login</h2>
+        <form>
+          <div className='mb-4'>
+            <label
+              className='block text-gray-700 text-sm font-bold mb-2'
+              htmlFor='email'
             >
-              View Details
-            </Link>
+              Email
+            </label>
+            <input
+              type='email'
+              id='email'
+              name='email'
+              className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+              placeholder='Email'
+            />
           </div>
-        ))}
+          <div className='mb-6'>
+            <label
+              className='block text-gray-700 text-sm font-bold mb-2'
+              htmlFor='password'
+            >
+              Password
+            </label>
+            <input
+              type='password'
+              id='password'
+              name='password'
+              className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+              placeholder='Password'
+            />
+          </div>
+          <div className='flex items-center justify-between'>
+            <button
+              type='submit'
+              className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+            >
+              Sign In
+            </button>
+            <a
+              href='#'
+              className='inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800'
+            >
+              Forgot Password?
+            </a>
+          </div>
+        </form>
       </div>
-      <div>
-        <input type='text' placeholder='Search for movies...' />
-        <button>Search</button>
-      </div>
-      <Link href='/browse'>Browse Movies</Link>
     </div>
   );
 }
