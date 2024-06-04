@@ -26,6 +26,14 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
 }
+#landing {
+  background-image: url("../../public/background.jpg");
+  background-position: center;
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+  background-attachment: fixed;
+  height: max-content;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
