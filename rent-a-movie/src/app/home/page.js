@@ -8,7 +8,6 @@ export default function Home() {
   return (
     <div>
       <div id='banner'></div>
-      <img src={"."} alt='' />
       <h2 className='text-xl font-bold text-center'>Trending movies</h2>
       <div className='items-center flex flex-wrap'>
         {movies.map((movie) => (
