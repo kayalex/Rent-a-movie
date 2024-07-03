@@ -1,33 +1,29 @@
-// pages/profile.js
 "use client";
-import { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
-export default function Profile() {
-  const [user, setUser] = useState(null);
+const UsersClient = () => {
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    // Fetch user profile from an API endpoint
-    fetch("/api/profile")
-      .then((response) => response.json())
-      .then((data) => setUser(data));
-  }, []);
+    const fetchUsers = async () => {
+      const res = await fetch("http://localhost:3000/actors"); // Replace with your API endpoint
+      const data = await res.json();
+      setUsers(data);
+    };
 
-  if (!user) {
-    return <div>Loading...</div>;
-  }
+    fetchUsers();
+  }, []);
 
   return (
     <div>
-      <h1>Profile</h1>
-      <div>
-        <p>
-          Name: {user.firstName} {user.lastName}
-        </p>
-        <p>Email: {user.email}</p>
-        <p>Phone Number: {user.phoneNumber}</p>
-        <p>Address: {user.address}</p>
-        <button>Edit Profile</button>
-      </div>
+      <h1>Users List</h1>
+      <ul>
+        {users.map((user) => (
+          <li key={user.ActorId}>{user.ActorName}</li>
+        ))}
+      </ul>
     </div>
   );
-}
+};
+
+export default UsersClient;

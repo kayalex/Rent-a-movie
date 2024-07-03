@@ -5,7 +5,7 @@ const movies = [
     genre: "comedy",
     actors: ["john", "rock", "downey"],
     image:
-      "https://th.bing.com/th/id/R.3aa1f8bcf2e33c6ae0aeebf9a3cb5d9e?rik=4HUml7VcLvjpAw&pid=ImgRaw&r=0",
+      "https://th.bing.com/th/id/OIP.bc6LFsSyD8iNMydB7FVr9AHaKg?w=186&h=264&c=7&r=0&o=5&dpr=1.3&pid=1.7",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde et accusamus, qui blanditiis consequatur asperiores explicabo obcaecati molestias velit veritatis.",
   },
